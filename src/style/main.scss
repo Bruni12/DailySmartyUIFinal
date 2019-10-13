@@ -11,13 +11,19 @@ body {
     justify-content: center;
 }
 
-.home {
+@mixin default-page-layout { 
     height: 100vh;
     width: 66vw;
     display: grid;
     align-content: space-evenly;
-    // justify-items: stretch;
-    // grid-template-rows: 1fr 2fr 1fr;
+}    
+    
+.home {
+    @include default-page-layout(); 
+}
+
+.results {
+    @include default-page-layout(); 
 }
 
 .logo-main,
@@ -39,5 +45,8 @@ $color-gray-one: #666666;
 $color-gray-two: #B3B3B3;
 $color-blue-one: #0079ff; 
 
+@import './mixins';
 @import './searchBar';
 @import './recentPosts';
+@import './results';
+@import './home';
