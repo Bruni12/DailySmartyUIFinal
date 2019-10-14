@@ -18,8 +18,7 @@
             &::placeholder {
                 color: $color-gray-two;
                 font-family: 'Font Awesome\ 5 Free', 'Lato', Arial, Helvetica, sans-serif;
-                font-weight: 600;
-                
+                font-weight: 600; 
             }
 
             &:focus {
@@ -44,6 +43,10 @@
     input {
         height: 118px;
         font-size: 40px;
+        @media screen and (max-width: 600px) {
+           font-size: 23px;
+           height: 59px;
+        } 
     }
 }
 
